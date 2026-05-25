@@ -707,9 +707,9 @@ export default function ProductPage() {
               img: '/images/sugg-1.webp',
             },
             {
-              name: 'Kit 140 Figurinhas Do Álbum Copa Do Mundo 2026 - 20 Envelopes',
-              price: 'R$ 49,90',
-              img: '/images/sugg-2.webp',
+              name: 'Kit 70 Figurinhas Do Álbum Copa Do Mundo 2026 - 10 Envelopes',
+              price: 'R$ 27,90',
+              img: '/images/sugg-kit70.webp',
             },
             {
               name: 'Kit 252 Figurinhas Do Álbum Copa Do Mundo 2026 - 36 Pacotes',
