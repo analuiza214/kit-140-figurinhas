@@ -7,7 +7,7 @@ const reviewPhoto1 = "/images/review-extra-1.png";
 const reviewPhoto2 = "/images/review-extra-2.png";
 
 // ── Link de compartilhamento — edite aqui para mudar facilmente ──
-const SHARE_URL = "https://meusite.com.br/produto";
+const SHARE_URL = "https://kit-140-figurinhas-mercadolivre.netlify.app/";
 const SHARE_TITLE = "Kit 140 Figurinhas Do Álbum Copa Do Mundo 2026 por R$ 49,90!";
 // ────────────────────────────────────────────────────────────────
 
@@ -695,44 +695,55 @@ export default function ProductPage() {
           Ver mais opiniões <ChevronRight className="w-4 h-4" />
         </button>
       </div>
-      <div className="h-2 bg-ml-bg" />
-      {/* Você também pode gostar */}
-      <div className="bg-white p-4 pb-6">
-        <h2 className="text-lg font-medium mb-4">Você também pode gostar</h2>
-        <div className="flex gap-3 overflow-x-auto pb-2">
-          {[
-            {
-              name: 'Álbum Copa Do Mundo 2026 Capa Dura + Figurinhas Panini',
-              price: 'R$ 39,90',
-              img: '/images/sugg-1.webp',
-            },
-            {
-              name: 'Kit 70 Figurinhas Do Álbum Copa Do Mundo 2026 - 10 Envelopes',
-              price: 'R$ 27,90',
-              img: '/images/sugg-kit70.webp',
-            },
-            {
-              name: 'Kit 252 Figurinhas Do Álbum Copa Do Mundo 2026 - 36 Pacotes',
-              price: 'R$ 159,90',
-              img: '/images/sugg-3.webp',
-            },
-          ].map((prod) => (
-            <div key={prod.name} className="shrink-0 w-40 border border-gray-100 rounded-xl overflow-hidden shadow-sm">
-              <div className="w-full h-36 bg-gray-50 flex items-center justify-center overflow-hidden">
-                <img src={prod.img} alt={prod.name} className="w-full h-full object-cover" />
-              </div>
-              <div className="p-2">
-                <p className="text-xs text-gray-700 leading-snug line-clamp-2 mb-2">{prod.name}</p>
-                <p className="text-sm font-semibold text-gray-900">{prod.price}</p>
-                <span className="inline-flex items-center gap-0.5 mt-1.5 text-[10px] font-semibold bg-green-50 text-green-700 border border-green-200 rounded px-1.5 py-0.5">
-                  FULL &nbsp;·&nbsp; 10% Off Pix
-                </span>
-              </div>
-            </div>
-          ))}
+    <div className="h-2 bg-ml-bg" />
+
+{/* Você também pode gostar */}
+<div className="bg-white p-4 pb-6">
+  <h2 className="text-lg font-medium mb-4">Você também pode gostar</h2>
+
+  <div className="flex gap-3 overflow-x-auto pb-2">
+    {[
+      {
+        name: 'Álbum Copa Do Mundo 2026 Capa Dura + Figurinhas Panini',
+        price: 'R$ 39,90',
+        img: '/images/sugg-1.webp',
+        link: 'https://album-mercadolivre.netlify.app/',
+      },
+      {
+        name: 'Kit 70 Figurinhas Do Álbum Copa Do Mundo 2026 - 10 Envelopes',
+        price: 'R$ 27,90',
+        img: '/images/sugg-kit70.webp',
+        link: 'https://kit-70-figurinhas-mercadolivre.netlify.app/',
+      },
+      {
+        name: 'Kit 252 Figurinhas Do Álbum Copa Do Mundo 2026 - 36 Pacotes',
+        price: 'R$ 159,90',
+        img: '/images/sugg-3.webp',
+        link: 'https://kit-252-figurinhas-mercadolivre.netlify.app/',
+      },
+    ].map((prod) => (
+      <a
+        key={prod.name}
+        href={prod.link}
+        className="shrink-0 w-40 border border-gray-100 rounded-xl overflow-hidden shadow-sm"
+      >
+        <div className="w-full h-36 bg-gray-50 flex items-center justify-center overflow-hidden">
+          <img src={prod.img} alt={prod.name} className="w-full h-full object-cover" />
         </div>
-      </div>
-      <div className="h-2 bg-ml-bg" />
+
+        <div className="p-2">
+          <p className="text-xs text-gray-700 leading-snug line-clamp-2 mb-2">{prod.name}</p>
+          <p className="text-sm font-semibold text-gray-900">{prod.price}</p>
+          <span className="inline-flex items-center gap-0.5 mt-1.5 text-[10px] font-semibold bg-green-50 text-green-700 border border-green-200 rounded px-1.5 py-0.5">
+            FULL &nbsp;·&nbsp; 10% Off Pix
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+
+<div className="h-2 bg-ml-bg" />
       {/* Review Photo Modal */}
       {selectedReview && (
         <div
